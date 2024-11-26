@@ -2,71 +2,94 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 body{
-  background-color: rgb(2, 16, 41);
-}
-nav{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 80px;
-  background-color: rgb(6, 32, 79);
-}
-nav ul{
-  display: flex;
   justify-content: center;
-  cursor: pointer;
-}
-nav ul li{
-  list-style: none;
-  margin: 23px;
-}
-nav ul li a{
-   text-decoration: none;
   
 }
-nav ul li a:hover{
- color: rgb(119, 229, 126);
- font-size: 1.05rem;
-}
-.left{
-  font-size: 1.5rem;
-}
 
-.firstSection{
+.calculator{
+
+  width: 80vw;
+  max-width: 300px;
+  height: 380px;
+  background-color: rgb(32, 24, 24);
+  border-radius: 10px;
+  box-shadow: 1px 5px 20px  rgb(29, 8, 66),-1px 5px 20px  rgb(98, 98, 225);
+}
+.display{
+  width: 100%;
+  height: 20%;
   display: flex;
-  justify-content: space-around;
-  margin: 80px 0;
   align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
 }
 
-.firstSection > div{
-  width: 30%;
+.display input{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8);
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: right;
+    font-size: 25px;
+}
+.buttons{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
+.row{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.leftSection{
-  font-size: 3rem;
+.row button{
+  width: 18%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+  -1px -2px 10px rgba(0,0,0,0.8);
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+.row1 button{
+
+    color: rgb(171, 128, 214);
 }
 
-.rightSection{
-  /* background-color:rgb(200, 28, 42); */
-  width: 30%;
-}
+ .row button:hover{
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.8);
+  font-size: small;
+  color: rgb(192, 187, 187);
+ }
 
-.rightSection img{
-    width: 80%;
-    margin: 50px 0;
-}
-.pink{
-  color:rgb(187, 65, 126)
-}
+#equal{
+  width: 40%;
+  color: rgb(171, 128, 214);
+  font-size: 30px;
 
-.projectsSection ul img{
-  width: 10%;
-  height: 10%;
-}
-#footer{
-  font-size: 45px;
 }

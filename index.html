@@ -1,83 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aftabkhan - Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="left">Aftabkhan' Portfolio</div>
-        <div class="right">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Skills</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
- 
-    <main>
-      <section class="firstSection">
-        <div class="leftSection">
-          Hi, My name is <span class="pink">Aftabkhan</span> 
-          <div>and I am a Web Developer</div>
-        </div>
-        <div class="rightSection">
-          <img src="Aftab_Img.jpg" alt="">
-        </div>
-      </section>
-      <p>I am Pathan Aftabkhan Naushadkhan From Aurangabad (Maharashtra) & i am student of Bsc(Computer Science) & i am in final year I want to become softwere engineer</p>
-      <div class="bio">I have knowledge about those skills
-        <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React(Basic)</li>
-        <li>Core Java</li></ul>
-      </div>
-    <div class="SkillSection">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="display" placeholder="0">
     </div>
-    <div class="projectsSection">
-      <ul>
-        <h2>Projects Titles</h2>
-        <li>Calculator</li>
-        <img src="Calculator.png" alt="">
-        <li>Puzzel Game</li>
-        <img src="Puzzel_Game.png" alt="">
-        <li>Tic-Tac-Teo Game</li>
-        <img src="Tic-Tac-Toe.png" alt="">
-      </ul>
-    </div>
-    <div class="resumeSection">
-      <div id="resume">
-      <a href="https://drive.google.com/file/d/1NOSUlSk-hSV9ww219i6jKac9o2H1RGUd/view?usp=drivesdk">My Resume
+    <div class="buttons">
+      <div class="row row1">
+        <button onclick="document.getElementById('display').value=''">AC</button>
+        <button onclick="document.getElementById('display').value=document.getElementById('display').value.toString().slice(0,-1)">DE</button>
+        <button onclick="document.getElementById('display').value += '.'">.</button>
+        <button onclick="document.getElementById('display').value += '/'">/</button>
       </div>
-    </div>
-    <div class="contactMe">
-      <div>
-        <a href="/">MyGmail:-khanaaftab8291@gmail.com</a>
+      <div class="row row2">
+        <button onclick="sinf()">Sin</button>
+        <button onclick="cosf()">Cos</button>
+        <button onclick="tanf()">Tan</button>
+        <button onclick="sqrtf()">&radic;</button>
       </div>
-     <div>
-       <a href="/">MyNumbers:-7522998291</a>
-     </div>
-    </div>
-    </main>
-    <footer>
-      <div id="footer">
-        &#169
+
+      <div class="row row3">
+        <button onclick="document.getElementById('display').value += '9'">9</button>
+        <button onclick="document.getElementById('display').value += '8'">8</button>
+        <button onclick="document.getElementById('display').value += '7'">7</button>
+        <button onclick="document.getElementById('display').value += '*'">*</button>
+
       </div>
-    </footer>
-  </body>
+      <div class="row row4">
+        <button onclick="document.getElementById('display').value += '6'">6</button>
+        <button onclick="document.getElementById('display').value += '5'">5</button>
+        <button onclick="document.getElementById('display').value += '4'">4</button>
+        <button onclick="document.getElementById('display').value += '+'">+</button>
+
+      </div>
+      <div class="row row5">
+        <button onclick="document.getElementById('display').value += '3'">3</button>
+        <button onclick="document.getElementById('display').value += '2'">2</button>
+        <button onclick="document.getElementById('display').value += '1'">1</button>
+        <button onclick="document.getElementById('display').value += '-'">-</button>
+      </div>
+      <div class="row row6">
+        <button onclick="document.getElementById('display').value += '0'">0</button>
+        <button onclick="document.getElementById('display').value += '00'">00</button>
+        <button id="equal" onclick="document.getElementById('display').value = eval(document.getElementById('display').value)" >=</button>
+       
+
+      </div>
+    </div> 
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
